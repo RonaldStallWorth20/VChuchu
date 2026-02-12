@@ -4,6 +4,7 @@ const valentineScreen = document.getElementById("valentine-screen");
 const noBtn = document.getElementById("no");
 const yesBtn = document.getElementById("yes");
 
+// Envelope click animation
 envelopeScreen.addEventListener("click", () => {
     envelope.classList.add("open");
 
@@ -13,25 +14,22 @@ envelopeScreen.addEventListener("click", () => {
     }, 800);
 });
 
+// NO button hover — floats within valentineScreen
 noBtn.addEventListener("mouseover", () => {
-    const container = valentineScreen; // the parent container
-    const containerWidth = container.clientWidth;
-    const containerHeight = container.clientHeight;
+    const container = valentineScreen; // parent container
+    const maxX = container.clientWidth - noBtn.offsetWidth;
+    const maxY = container.clientHeight - noBtn.offsetHeight;
 
-    const maxX = containerWidth - noBtn.offsetWidth;
-    const maxY = containerHeight - noBtn.offsetHeight;
-
+    // Random position inside container
     const randomX = Math.random() * maxX;
     const randomY = Math.random() * maxY;
 
-    // Keep initial "right" style: calculate relative to container
-    noBtn.style.left = randomX + "px";  // using left now inside container
+    // Use left and top for floating inside the container
+    noBtn.style.left = randomX + "px";
     noBtn.style.top = randomY + "px";
 });
 
-
-function createHeart()
-{
+function createHeart() {
     const heart = document.createElement("div");
     heart.classList.add("heart");
     heart.innerHTML = "❤️";
@@ -42,19 +40,16 @@ function createHeart()
 
     document.body.appendChild(heart);
 
-    setTimeout(() => {
-        heart.remove();
-    }, 5000);
-
+    setTimeout(() => heart.remove(), 1400);
 }
+
 yesBtn.addEventListener("click", () => {
     for (let i = 0; i < 40; i++)
     {
         createHeart();
     }
 
-    setTimeout(() => 
-    {
+    setTimeout(() => {
         window.location.href = "vYes.html";
-    }, 1800);
+    }, 1400);
 });

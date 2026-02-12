@@ -77,33 +77,34 @@ button {
 
 .button-row {
     position: relative;
+    width: 100%;
     display: flex;
     justify-content: center;
     gap: 40px;
-    width: 300px;
-    margin: 0 auto;
     height: 80px;
+    margin: 0 auto;
 }
-
 
 #yes {
+    position: absolute;
+    left: 20px;
+    top: 0;
     background-color: #ff4d6d;
     color: white;
-    position:absolute;
-    left:0;
 }
+
+#no {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    background-color: #aaa;
+    color: white;
+}
+
 
 #yes:hover {
     transform: scale(1.2);
 }
-
-#no {
-    background-color: #aaa;
-    color: white;
-    position: absolute;
-    right:0;
-}
-
 
 .heart {
     position: fixed;
