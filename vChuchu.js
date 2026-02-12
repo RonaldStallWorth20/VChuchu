@@ -20,13 +20,13 @@ noBtn.addEventListener("mouseover", () => {
     const maxX = containerRect.width - noBtn.offsetWidth;
     const maxY = containerRect.height - noBtn.offsetHeight;
 
+    // randomX is distance from left of container
     const randomX = Math.random() * maxX;
     const randomY = Math.random() * maxY;
 
-    noBtn.style.left = randomX + "px";
+    noBtn.style.right = (containerRect.width - noBtn.offsetWidth - randomX) + "px";
     noBtn.style.top = randomY + "px";
 });
-
 
 function createHeart()
 {
