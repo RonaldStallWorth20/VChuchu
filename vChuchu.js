@@ -25,20 +25,25 @@ noBtn.addEventListener("mouseover", () => {
     noBtn.style.top = randomY + "px";
 });
 
+function createHeart()
+{
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (20 + Math.random() * 30) + "px";
+    heart.style.animationDuration = (3 + Math.random() * 2) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+
+}
 yesBtn.addEventListener("click", () => {
-    document.body.innerHTML = `
-        <div style="
-            height:100vh;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            font-family:Poppins;
-            background:linear-gradient(135deg,#ff9a9e,#fad0c4);
-            font-size:40px;
-            text-align:center;
-        ">
-            YAYYYYY 😭❤️<br>
-            You just made my year.
-        </div>
-    `;
+    for (let i = 0; i < 40; i++) {
+        createHeart();
+    }
 });
