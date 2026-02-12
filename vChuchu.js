@@ -43,7 +43,9 @@ function createHeart()
 
 }
 yesBtn.addEventListener("click", () => {
-    for (let i = 0; i < 40; i++) {
+    window.location.href="vYes.html";
+    for (let i = 0; i < 40; i++)
+        {
         createHeart();
     }
 });
