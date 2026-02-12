@@ -86,24 +86,18 @@ button {
 }
 
 #yes {
-    position: absolute;
-    left: 20px;
-    top: 0;
     background-color: #ff4d6d;
     color: white;
 }
 
-#no {
-    position: absolute;
-    right: 20px;
-    top: 0;
-    background-color: #aaa;
-    color: white;
+#yes:hover {
+    transform: scale(1.1);
 }
 
-
-#yes:hover {
-    transform: scale(1.2);
+#no {
+    background-color: #aaa;
+    color: white;
+    position: absolute;
 }
 
 .heart {
