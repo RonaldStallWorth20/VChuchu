@@ -14,7 +14,9 @@ envelopeScreen.addEventListener("click", () => {
 });
 
 noBtn.addEventListener("mouseover", () => {
-    const containerRect = valentineScreen.getBoundingClientRect();
+    const container = document.querySelector(".button-row");
+    const containerRect = container.getBoundingClientRect();
+
     const maxX = containerRect.width - noBtn.offsetWidth;
     const maxY = containerRect.height - noBtn.offsetHeight;
 
@@ -24,6 +26,7 @@ noBtn.addEventListener("mouseover", () => {
     noBtn.style.left = randomX + "px";
     noBtn.style.top = randomY + "px";
 });
+
 
 function createHeart()
 {
@@ -51,5 +54,5 @@ yesBtn.addEventListener("click", () => {
     setTimeout(() => 
     {
         window.location.href = "vYes.html";
-    }, 2500);
+    }, 1800);
 });

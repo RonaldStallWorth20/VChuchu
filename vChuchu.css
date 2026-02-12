@@ -74,17 +74,23 @@ button {
     transition: 0.3s ease;
 }
 
+
 .button-row {
+    position: relative;
     display: flex;
     justify-content: center;
-    gap: 40px; 
-    position: relative;
+    gap: 40px;
+    width: 300px;
+    margin: 0 auto;
+    height: 80px;
 }
 
 
 #yes {
     background-color: #ff4d6d;
     color: white;
+    position:absolute;
+    left:0;
 }
 
 #yes:hover {
@@ -94,8 +100,10 @@ button {
 #no {
     background-color: #aaa;
     color: white;
-    position:absolute;
+    position: absolute;
+    right:0;
 }
+
 
 .heart {
     position: fixed;
