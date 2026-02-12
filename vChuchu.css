@@ -20,8 +20,8 @@ h1 {
 }
 
 .envelope {
-    width: 300px;
-    height: 180px;
+    width: 400px;
+    height: 240px;
     background: #ff4d6d;
     position: relative;
     border-radius: 5px;
@@ -31,8 +31,8 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 300px;
-    height: 90px;
+    width: 400px;
+    height: 120px;
     background: #ff758f;
     clip-path: polygon(0 0, 50% 100%, 100% 0);
     transform-origin: top;
@@ -46,7 +46,7 @@ h1 {
 .open-text {
     margin-top: 20px;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 24px;
 }
 
 /* Valentine Screen */
@@ -94,6 +94,7 @@ button {
 #no {
     background-color: #aaa;
     color: white;
+    position:absolute;
 }
 
 .heart {
