@@ -72,19 +72,19 @@ button {
     margin: 10px;
 }
 .button-row {
-    position: relative; /* container for absolute positioning of NO */
+    position: relative; /* optional, can remove if NO is moved to valentineScreen */
     display: flex;
     justify-content: center;
-    gap: 40px; /* spacing between buttons */
-    width: 300px; /* adjust as needed */
+    gap: 40px; /* space between YES and initial NO */
+    width: auto; /* width adjusts to content */
     margin: 0 auto;
-    height: 300px;
+    /* height removed */
 }
 
 #yes {
     background-color: #ff4d6d;
     color: white;
-    /* keep normal flow with flex, no absolute */
+    /* normal flow inside flex, no absolute needed */
 }
 
 #yes:hover {
@@ -94,11 +94,12 @@ button {
 #no {
     background-color: #aaa;
     color: white;
-    position: absolute; /* needed for hover movement */
-    top: 0;
-    left: 50%; /* start near the right-ish of center */
-    transform: translateX(50%);
+    position: absolute; /* relative to valentine-screen now */
+    top: 50%;   /* vertically aligned in screen initially */
+    left: 60%;  /* slightly to the right */
+    transform: translate(-50%, -50%);
 }
+
 
 .heart {
     position: fixed;

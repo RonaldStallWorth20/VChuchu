@@ -14,11 +14,11 @@ envelopeScreen.addEventListener("click", () => {
     }, 800);
 });
 
-noBtn.style.left = (container.clientWidth - noBtn.offsetWidth) + "px";
-
 noBtn.addEventListener("mouseover", () => {
-    const maxX = container.clientWidth - noBtn.offsetWidth;
-    const maxY = container.clientHeight - noBtn.offsetHeight;
+    const containerRect = valentineScreen.getBoundingClientRect();
+
+    const maxX = containerRect.width - noBtn.offsetWidth;
+    const maxY = containerRect.height - noBtn.offsetHeight;
 
     const randomX = Math.random() * maxX;
     const randomY = Math.random() * maxY;
