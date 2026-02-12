@@ -63,16 +63,6 @@ h1 {
     border-radius: 15px;
 }
 
-.button-row {
-    position: relative;  /* important! NO moves inside this */
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    width: 300px;
-    margin: 0 auto;
-    height: 80px;
-}
-
 button {
     padding: 15px 30px;
     font-size: 18px;
@@ -81,13 +71,20 @@ button {
     cursor: pointer;
     margin: 10px;
 }
+.button-row {
+    position: relative; /* container for absolute positioning of NO */
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* spacing between buttons */
+    width: 300px; /* adjust as needed */
+    margin: 0 auto;
+    height: 300px;
+}
 
-/* YES fixed on left of row, NO on right */
 #yes {
     background-color: #ff4d6d;
     color: white;
-    position: absolute;
-    left: 0;
+    /* keep normal flow with flex, no absolute */
 }
 
 #yes:hover {
@@ -97,8 +94,10 @@ button {
 #no {
     background-color: #aaa;
     color: white;
-    position: absolute;
-    right: 0;
+    position: absolute; /* needed for hover movement */
+    top: 0;
+    left: 50%; /* start near the right-ish of center */
+    transform: translateX(50%);
 }
 
 .heart {

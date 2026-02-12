@@ -3,6 +3,7 @@ const envelopeScreen = document.getElementById("envelope-screen");
 const valentineScreen = document.getElementById("valentine-screen");
 const noBtn = document.getElementById("no");
 const yesBtn = document.getElementById("yes");
+const container = document.querySelector(".button-row");
 
 envelopeScreen.addEventListener("click", () => {
     envelope.classList.add("open");
@@ -13,9 +14,9 @@ envelopeScreen.addEventListener("click", () => {
     }, 800);
 });
 
-// Hover logic for NO button inside .button-row
+noBtn.style.left = (container.clientWidth - noBtn.offsetWidth) + "px";
+
 noBtn.addEventListener("mouseover", () => {
-    const container = document.querySelector(".button-row");
     const maxX = container.clientWidth - noBtn.offsetWidth;
     const maxY = container.clientHeight - noBtn.offsetHeight;
 
