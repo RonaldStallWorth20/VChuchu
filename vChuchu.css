@@ -9,14 +9,19 @@ body {
     overflow: hidden;
 }
 
+h1 {
+    text-align: center;
+}
+
+
 #envelope-screen {
     text-align: center;
     cursor: pointer;
 }
 
 .envelope {
-    width: 300x;
-    height: 220px;
+    width: 300px;
+    height: 180px;
     background: #ff4d6d;
     position: relative;
     border-radius: 5px;
@@ -26,8 +31,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 200px;
-    height: 100px;
+    width: 300px;
+    height: 90px;
     background: #ff758f;
     clip-path: polygon(0 0, 50% 100%, 100% 0);
     transform-origin: top;
@@ -69,8 +74,16 @@ button {
     transition: 0.3s ease;
 }
 
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    position: relative;
+}
+
+
 #yes {
-    background-color: #d50128;
+    background-color: #ff4d6d;
     color: white;
 }
 
@@ -79,9 +92,8 @@ button {
 }
 
 #no {
-    background-color: #100303;
+    background-color: #aaa;
     color: white;
-    position: absolute;
 }
 
 .heart {
