@@ -14,17 +14,21 @@ envelopeScreen.addEventListener("click", () => {
 });
 
 noBtn.addEventListener("mouseover", () => {
-    const containerRect = valentineScreen.getBoundingClientRect();
+    const container = valentineScreen; // the parent container
+    const containerWidth = container.clientWidth;
+    const containerHeight = container.clientHeight;
 
-    const maxX = containerRect.width - noBtn.offsetWidth;
-    const maxY = containerRect.height - noBtn.offsetHeight;
+    const maxX = containerWidth - noBtn.offsetWidth;
+    const maxY = containerHeight - noBtn.offsetHeight;
 
     const randomX = Math.random() * maxX;
     const randomY = Math.random() * maxY;
 
-    noBtn.style.right = (containerRect.width - noBtn.offsetWidth - randomX) + "px";
+    // Keep initial "right" style: calculate relative to container
+    noBtn.style.left = randomX + "px";  // using left now inside container
     noBtn.style.top = randomY + "px";
 });
+
 
 function createHeart()
 {
