@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    overflow: hidden;
+}
+
+#envelope-screen {
+    text-align: center;
+    cursor: pointer;
+}
+
+.envelope {
+    width: 200px;
+    height: 120px;
+    background: #ff4d6d;
+    position: relative;
+    border-radius: 5px;
+}
+
+.flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100px;
+    background: #ff758f;
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    transform-origin: top;
+    transition: transform 0.8s ease;
+}
+
+.envelope.open .flap {
+    transform: rotateX(180deg);
+}
+
+.open-text {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Valentine Screen */
+#valentine-screen {
+    display: none;
+    text-align: center;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.valentine-img {
+    border-radius: 15px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.3s ease;
+}
+
+#yes {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+#yes:hover {
+    transform: scale(1.1);
+}
+
+#no {
+    background-color: #aaa;
+    color: white;
+    position: absolute;
+}
