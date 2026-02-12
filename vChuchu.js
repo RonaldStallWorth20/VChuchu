@@ -4,7 +4,6 @@ const valentineScreen = document.getElementById("valentine-screen");
 const noBtn = document.getElementById("no");
 const yesBtn = document.getElementById("yes");
 
-// Envelope click animation
 envelopeScreen.addEventListener("click", () => {
     envelope.classList.add("open");
 
@@ -14,8 +13,9 @@ envelopeScreen.addEventListener("click", () => {
     }, 800);
 });
 
+// Hover logic for NO button inside .button-row
 noBtn.addEventListener("mouseover", () => {
-    const container = valentineScreen;
+    const container = document.querySelector(".button-row");
     const maxX = container.clientWidth - noBtn.offsetWidth;
     const maxY = container.clientHeight - noBtn.offsetHeight;
 
@@ -26,7 +26,7 @@ noBtn.addEventListener("mouseover", () => {
     noBtn.style.top = randomY + "px";
 });
 
-
+// Heart animation for YES button
 function createHeart() {
     const heart = document.createElement("div");
     heart.classList.add("heart");
@@ -38,16 +38,17 @@ function createHeart() {
 
     document.body.appendChild(heart);
 
-    setTimeout(() => heart.remove(), 1400);
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
 }
 
 yesBtn.addEventListener("click", () => {
-    for (let i = 0; i < 40; i++)
-    {
+    for (let i = 0; i < 40; i++) {
         createHeart();
     }
 
     setTimeout(() => {
         window.location.href = "vYes.html";
-    }, 1400);
+    }, 1800);
 });
