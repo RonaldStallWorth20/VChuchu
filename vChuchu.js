@@ -14,8 +14,7 @@ envelopeScreen.addEventListener("click", () => {
 });
 
 noBtn.addEventListener("mouseover", () => {
-    const container = document.getElementById("valentine-screen"); // parent container
-    const containerRect = container.getBoundingClientRect();
+    const containerRect = valentineScreen.getBoundingClientRect();
 
     const maxX = containerRect.width - noBtn.offsetWidth;
     const maxY = containerRect.height - noBtn.offsetHeight;
