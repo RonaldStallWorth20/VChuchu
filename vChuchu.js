@@ -14,13 +14,12 @@ envelopeScreen.addEventListener("click", () => {
 });
 
 noBtn.addEventListener("mouseover", () => {
-    const container = document.querySelector(".button-row");
+    const container = document.getElementById("valentine-screen"); // parent container
     const containerRect = container.getBoundingClientRect();
 
     const maxX = containerRect.width - noBtn.offsetWidth;
     const maxY = containerRect.height - noBtn.offsetHeight;
 
-    // randomX is distance from left of container
     const randomX = Math.random() * maxX;
     const randomY = Math.random() * maxY;
 
