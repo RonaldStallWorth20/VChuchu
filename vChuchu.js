@@ -14,20 +14,18 @@ envelopeScreen.addEventListener("click", () => {
     }, 800);
 });
 
-// NO button hover — floats within valentineScreen
 noBtn.addEventListener("mouseover", () => {
-    const container = valentineScreen; // parent container
+    const container = valentineScreen;  // the parent container
     const maxX = container.clientWidth - noBtn.offsetWidth;
     const maxY = container.clientHeight - noBtn.offsetHeight;
 
-    // Random position inside container
     const randomX = Math.random() * maxX;
     const randomY = Math.random() * maxY;
 
-    // Use left and top for floating inside the container
     noBtn.style.left = randomX + "px";
     noBtn.style.top = randomY + "px";
 });
+
 
 function createHeart() {
     const heart = document.createElement("div");
